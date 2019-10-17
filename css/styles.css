@@ -1,0 +1,101 @@
+:root {
+	--brown: #A77E5C;
+	--crem: #E7D0A7;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body,
+html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after,
+.clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+.container {
+	position: relative;
+	background: lightblue;
+	max-width: 1600px;
+	width: 100%;
+	height: 800px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* padding-bottom: 20px; */
+
+}
+
+.desk {
+	position: relative;
+	width: 602px;
+	height: 602px;
+	border: 2px solid black;
+	display: flex;
+
+}
+
+
+li {
+	position: relative;
+	width: 75px;
+	height: 75px;
+	border: 1px solid black;
+}
+
+li .checker_black {
+	position: absolute;
+	top: -3px;
+	
+}
+
+li .checker_white {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+
+.cells {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+
+
+.odd li:nth-child(even) {
+	background: var(--brown);
+}
+
+.odd li:nth-child(odd) {
+	background: var(--crem);
+} 
+
+.even li:nth-child(odd) {
+	background: var(--brown);
+}
+
+.even li:nth-child(even) {
+	background: var(--crem);
+}
+
